@@ -1,0 +1,9 @@
+<gapi-parser-input>
+  <api filename="../api/gtksharp-api.xml">
+    <library name="libgtkspell.dll">
+      <namespace name="GtkSpell">
+        <dir>/usr/include/gtkspell-2.0/gtkspell</dir>
+      </namespace>
+    </library>
+  </api>
+</gapi-parser-input>

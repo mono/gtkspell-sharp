@@ -1,0 +1,14 @@
+
+Building:
+
+./configure
+make
+make install
+
+
+WIN32 runtimes:
+GtkSpell will build on WIN32, but for simplisty I use GAIM's GTK+ runtime installer
+http://gaim.sf.net/win32
+
+You can get the dictionaries and installers for win32 here.
+http://www.aspell.org/win32/
