@@ -4,7 +4,7 @@ using GtkSpell;
 
 public class GtkHelloWorld {
  
-  public static void Main() {
+  public static void Main(string[] args) {
     Application.Init();
 
     //Create the Window
@@ -14,8 +14,13 @@ public class GtkHelloWorld {
     //Create a TextView 
     TextView myTextView = new TextView();
     
+    SpellCheck mySpellCheck;
+    
     //Bind GtkSpell to our textview
-    SpellCheck mySpellCheck = new SpellCheck(myTextView, "en-us");
+    if (args.Length > 0)
+	    mySpellCheck = new SpellCheck(myTextView, args[0]);
+	else    
+	    mySpellCheck = new SpellCheck(myTextView, "en-us");
 
     //spellCheck.Detach();
     //spellCheck.();
@@ -26,6 +31,13 @@ public class GtkHelloWorld {
     //Show Everything     
     myWin.ShowAll();
     
+ 	myWin.DeleteEvent += new DeleteEventHandler(delete);
+    
     Application.Run();   
+   }
+   
+   static void delete(object o, DeleteEventArgs args)
+   {
+    Application.Quit();
    }
 }

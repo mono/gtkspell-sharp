@@ -1,0 +1,5 @@
+24-03-2005 Rafael Teixeira <rafaelteixeirabr@hotmail.com>
+	sample/TestGtkSpell.cs
+	-- added a delete event handler to end the application when closing the window
+	-- now accepts an optional command line argument to specify locale. 
+	   Ex: "mono TestGtkSpell.exe pt-br", defaults to en-us as before
