@@ -1,3 +1,9 @@
+13-04-2005 Zac Bowling <zac@zacbowling.com>
+	sources/gtkspell-sharp.sources: 
+	sources/gtkspell-2.0.10.tar.gz: added sources used to build
+	sources/Win32/libgtkspell.dll: added win32 dll for convience
+	api/*: removed, sources generate directly to raw now
+
 24-03-2005 Rafael Teixeira <rafaelteixeirabr@hotmail.com>
 	sample/TestGtkSpell.cs
 	-- added a delete event handler to end the application when closing the window
