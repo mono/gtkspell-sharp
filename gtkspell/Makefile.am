@@ -40,8 +40,8 @@ gtkspell-sharp.snk: $(top_srcdir)/gtkspell-sharp.snk
 	cp $(top_srcdir)/gtkspell-sharp.snk .
 
 gtkspell-sharp.dll: $(build_sources) generated-stamp gtkspell-sharp.snk
-	$(MCS) --unsafe --target library $(GTK_SHARP_LIBS) \
-	$(build_sources) generated/*.cs -o gtkspell-sharp.dll
+	$(MCS) -unsafe -target:library $(GTK_SHARP_LIBS) \
+	$(build_sources) generated/*.cs -out:gtkspell-sharp.dll
 
 install-data-local:
 	echo "$(GACUTIL) /i $(ASSEMBLY) /f /package gtkspell-sharp-2.0 /root $(DESTDIR)$(libdir)";  \

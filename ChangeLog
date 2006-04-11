@@ -1,3 +1,6 @@
+10-04-2006 Zac Bowling <zac@zacbowling.com>
+	gtkspell/Makefile.am - Updated mcs build to prevent warnings
+
 09-03-2006 Zac Bowling <zac@zacbowling.com>
 	README: updated description 
 	docs/README: simple set of api documentation
