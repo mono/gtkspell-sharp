@@ -18,9 +18,9 @@ public class GtkHelloWorld {
     
     //Bind GtkSpell to our textview
     if (args.Length > 0)
-	    mySpellCheck = new SpellCheck(myTextView, args[0]);
-	else    
-	    mySpellCheck = new SpellCheck(myTextView, "en-us");
+      mySpellCheck = new SpellCheck(myTextView, args[0]);
+    else    
+      mySpellCheck = new SpellCheck(myTextView, "en-us");
 
     //spellCheck.Detach();
     //spellCheck.();
@@ -31,7 +31,7 @@ public class GtkHelloWorld {
     //Show Everything     
     myWin.ShowAll();
     
- 	myWin.DeleteEvent += new DeleteEventHandler(delete);
+    myWin.DeleteEvent += new DeleteEventHandler(delete);
     
     Application.Run();   
    }
