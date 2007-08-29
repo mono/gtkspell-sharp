@@ -1,3 +1,12 @@
+28-08-2007 Brad Taylor <brad@getcoded.net>
+
+	* configure.in: Fixes for win32 build -- Remove specific Mono checks in
+	  favour of more cross-platform checks that are found later in the
+	  file. Add GENERATED_SOURCES fix from gtk-sharp.
+	* gtkspell/Makefile.am: Put -out before sources, as csc.exe complains
+	  otherwise. Use $(GENERATED_SOURCES) so that we can switch the
+	  directory separator based on platform.
+
 11-04-2006 Zac Bowling <zac@zacbowling.com>
 	sample/TestGtkSpell.cs - Cleaned up spacing
 	

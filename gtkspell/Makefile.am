@@ -1,4 +1,3 @@
-MCS=mcs
 RAW_API=gtkspell-api.raw
 API=gtkspell-api.xml
 METADATA=gtkspell.metadata
@@ -40,8 +39,8 @@ gtkspell-sharp.snk: $(top_srcdir)/gtkspell-sharp.snk
 	cp $(top_srcdir)/gtkspell-sharp.snk .
 
 gtkspell-sharp.dll: $(build_sources) generated-stamp gtkspell-sharp.snk
-	$(MCS) -unsafe -target:library $(GTK_SHARP_LIBS) \
-	$(build_sources) generated/*.cs -out:gtkspell-sharp.dll
+	$(CSC) -out:gtkspell-sharp.dll -unsafe -target:library $(GTK_SHARP_LIBS) \
+	$(build_sources) $(GENERATED_SOURCES)
 
 install-data-local:
 	echo "$(GACUTIL) /i $(ASSEMBLY) /f /package gtkspell-sharp-2.0 /root $(DESTDIR)$(libdir)";  \
